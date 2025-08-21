@@ -5,18 +5,16 @@ function getComputerChoice() {
 
     // return a string based on the value of randomChoice
     if (randomNumber === 0) {
-        computerChoice = "Rock";
+        computerChoice = "rock";
     } else if (computerChoice === 1) {
-        computerChoice = "Paper";
+        computerChoice = "paper";
     } else {
-        computerChoice = "Scissors";
+        computerChoice = "scissors";
     }
     
-    console.log(computerChoice);
+    return computerChoice;
 }
 
-
-getComputerChoice();
 
 // get user's choice
 function getHumanChoice() {
@@ -26,16 +24,27 @@ function getHumanChoice() {
     return humanChoice;
 }
 
-getHumanChoice();
 
 // track players scores
 
 let humanScore = 0;
 let computerScore = 0;
 
+
 // play a round of the game
 function playRound(humanChoice, computerChoice) {
     
+    if (humanChoice = "rock" && computerChoice === "scissors") {
+        console.log("You win! Rock beats Scissors.")
+    } else if (humanChoice = "paper" && computerChoice === "rock") {
+        console.log("You win! Paper beats rock.")
+    } else if (humanChoice = "scissors" && computerChoice === "paper") {
+        console.log("You win! Scissors beats paper.")
+    } else {
+        console.log("You lose.");
+    }
+
+    // increment score variables based on round winner
 }
 
 const humanSelection = getHumanChoice();
