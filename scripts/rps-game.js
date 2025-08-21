@@ -1,11 +1,11 @@
 // randomize the computer's choice
 function getComputerChoice() {
-    let randomChoice = Math.floor(Math.random() * 3);
+    let computerChoice = Math.floor(Math.random() * 3);
 
     // return a string based on the value of randomChoice
-    if (randomChoice === 0) {
+    if (computerChoice === 0) {
         return "Rock";
-    } else if (randomChoice === 1) {
+    } else if (computerChoice === 1) {
         return "Paper";
     } else {
         return "Scissors";
@@ -16,10 +16,10 @@ getComputerChoice();
 
 // get user's choice
 function getHumanChoice() {
-    // prompt for user input and convert value to an integer
-    let userChoice = parseInt(prompt("Let's play Rock, Paper, Scissors! Enter your choice."));
+    // prompt for user input
+    let humanChoice = prompt("Let's play Rock, Paper, Scissors! Enter your choice.");
 
-    return userChoice;
+    return humanChoice;
 }
 
 getHumanChoice();
