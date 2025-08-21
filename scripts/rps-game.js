@@ -1,16 +1,20 @@
 // randomize the computer's choice
 function getComputerChoice() {
-    let computerChoice = Math.floor(Math.random() * 3);
+    let computerChoice = "";
+    let randomNumber = Math.floor(Math.random() * 3);
 
     // return a string based on the value of randomChoice
-    if (computerChoice === 0) {
-        return "Rock";
+    if (randomNumber === 0) {
+        computerChoice = "Rock";
     } else if (computerChoice === 1) {
-        return "Paper";
+        computerChoice = "Paper";
     } else {
-        return "Scissors";
+        computerChoice = "Scissors";
     }
+    
+    console.log(computerChoice);
 }
+
 
 getComputerChoice();
 
@@ -37,4 +41,4 @@ function playRound(humanChoice, computerChoice) {
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+playRound(humanSelection, computerSelection); 
