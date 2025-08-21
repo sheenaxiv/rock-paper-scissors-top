@@ -32,3 +32,9 @@ function getHumanChoice() {
 }
 
 getHumanChoice();
+
+// track players scores
+
+let humanScore = 0;
+let computerScore = 0;
+
