@@ -19,9 +19,9 @@ function getComputerChoice() {
 // get user's choice
 function getHumanChoice() {
     // prompt for user input
-    let humanChoice = prompt("Your turn! Enter your choice.");
+    let humanChoice = prompt("Your turn! Enter your choice (rock, paper, or scissors):");
 
-    return humanChoice;
+    return humanChoice.toLowerCase();
 }
 
 
@@ -40,13 +40,13 @@ function playGame(humanChoice, computerChoice) {
 
     // play a single round of the game   
     function playRound(humanSelection, computerSelection) {
-        if (humanChoice == "rock" && computerChoice === "scissors") {
+        if (humanChoice === "rock" && computerChoice === "scissors") {
             console.log("You win! Rock beats Scissors.");
             humanScore++;
-        } else if (humanChoice == "paper" && computerChoice === "rock") {
+        } else if (humanChoice === "paper" && computerChoice === "rock") {
             console.log("You win! Paper beats rock.");
             humanScore++;
-        } else if (humanChoice == "scissors" && computerChoice === "paper") {
+        } else if (humanChoice === "scissors" && computerChoice === "paper") {
             console.log("You win! Scissors beats paper.");
             humanScore++;
         } else {
