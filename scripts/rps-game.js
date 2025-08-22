@@ -32,19 +32,24 @@ let computerScore = 0;
 
 
 // play a round of the game
+// increment score variables based on round winner
 function playRound(humanChoice, computerChoice) {
     
     if (humanChoice = "rock" && computerChoice === "scissors") {
-        console.log("You win! Rock beats Scissors.")
+        console.log("You win! Rock beats Scissors.");
+        humanScore++;
     } else if (humanChoice = "paper" && computerChoice === "rock") {
-        console.log("You win! Paper beats rock.")
+        console.log("You win! Paper beats rock.");
+        humanScore++;
     } else if (humanChoice = "scissors" && computerChoice === "paper") {
-        console.log("You win! Scissors beats paper.")
+        console.log("You win! Scissors beats paper.");
+        humanScore++;
     } else {
         console.log("You lose.");
+        computerScore++;
     }
 
-    // increment score variables based on round winner
+    
 }
 
 const humanSelection = getHumanChoice();
