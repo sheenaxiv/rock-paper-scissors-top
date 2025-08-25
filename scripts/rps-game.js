@@ -18,16 +18,14 @@ function getComputerChoice() {
 
 // get user's choice
 function getHumanChoice() {
-    // prompt for user input
     let humanChoice = prompt("Your turn! Enter your choice (rock, paper, or scissors):");
-
+    
     return humanChoice.toLowerCase();
 }
 
 
 // play a single round of the game   
 function playRound(humanSelection, computerSelection) {
-    // declare player choices
     console.log(`You chose: ${humanSelection}`);
     console.log(`Computer chose: ${computerSelection}`);
 
@@ -53,15 +51,11 @@ function playRound(humanSelection, computerSelection) {
 
 // play 5 rounds of the game
 function playGame(humanChoice, computerChoice) {
-    // announce game
     console.log("Let's play 5 rounds of Rock, Paper, Scissors!")
 
-    // track players scores
     let humanScore = 0;
     let computerScore = 0;
 
-
-    // play 5 rounds
     for (let round = 1; round <= 5; round++) {
         console.log(`Round ${round}`);
 
@@ -72,7 +66,6 @@ function playGame(humanChoice, computerChoice) {
         // play a round and get the winner
         const winner = playRound(humanSelection, computerSelection);
 
-        // update scores
         if (winner === "human") {
             humanScore++;
         } else if (winner === "computer") {
@@ -80,7 +73,6 @@ function playGame(humanChoice, computerChoice) {
         }
     }
 
-    // declare overall winner
     console.log("Final Results");
     if (humanScore > computerScore) {
         console.log(`You won ${humanScore} rounds. You have won the game. Congratulations!`);
@@ -92,5 +84,4 @@ function playGame(humanChoice, computerChoice) {
 }
 
 
-// start the game
 playGame();
